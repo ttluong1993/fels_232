@@ -1,33 +1,65 @@
 en:
-  layouts:
-    title: "Framgia E-learning System"
-    home: "Home"
-    logo: "E-learning System"
-    signup: "Sign up now!"
-    login: "Log in"
-    help: "Help"
-    about: "About"
-    contact: "Contact"
+  activerecord:
+    attributes:
+      user:
+        name: "User's name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
 
-  header:
-    logo: "E-learning"
+  pages:
+    home:
+      title: "Home"
+      center_logo: "E-learning System"
+      sign_up: "Sign up now"
 
-  footer:
-    fels: "The Framgia E-learning System"
-    author: "by Ta Thanh Luong"
-    rails_tutorial: "Rails Tutorial"
+    help:
+      title: "Help"
+      get_help: "Get help on the Ruby on Rails Tutorial at the"
+      help_page: "Rails Tutorial help page"
+      get_book: "To get Rails Tutorial book, see the"
+      rails_book: "Ruby on Rails Tutorial book"
 
-  help:
-    get_help: "Get help on the Ruby on Rails Tutorial at the"
-    help_page: "Rails Tutorial help page"
-    get_book: "To get Rails Tutorial book, see the"
-    rails_book: "Ruby on Rails Tutorial book"
-
-  about:
-    intro: "The E-learning System is a simple project to implement 
+    about:
+      title: "About"
+      intro: "The E-learning System is a simple project to implement 
       following"
-    rails_tutorial: "the Ruby on Rails Tutorial"
+      rails_tutorial: "the Ruby on Rails Tutorial"
 
-  contact:
-    contact_admin: "Contact the E-learning System's admin at the"
-    facbook: "facebook"
+    contact:
+      title: "Contact"
+      contact_admin_at: "Contact the E-learning System's admin at the"
+      facbook: "facebook"
+  
+  layouts:
+    application:
+      basic_title: "Framgia E-learning System"
+      
+    header:
+      logo: "E-learning"
+      home: "Home"
+      log_in: "Log in"
+      help: "Help"
+
+    footer:
+      fels: "The Framgia E-learning System"
+      author: "by Ta Thanh Luong"
+      rails_tutorial: "Rails Tutorial"
+      about: "About"
+      contact: "Contact"
+    
+  shared:
+    error_messages:
+      form_contains: "The form contains"
+      error: "error"
+
+  users:
+    new:
+      title: "Sign up"
+      create_account: "Create my account"
+
+    create:
+      success_signup: "Sign up successful! Welcome to E-learning System!"
+
+    show:
+      user_not_exist: "User does not exist!"

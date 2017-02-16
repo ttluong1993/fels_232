@@ -34,12 +34,16 @@ en:
   layouts:
     application:
       basic_title: "Framgia E-learning System"
-      
+
     header:
       logo: "E-learning"
       home: "Home"
       log_in: "Log in"
       help: "Help"
+      users: "Users"
+      user_profile: "User profile"
+      settings: "Settings"
+      log_out: "Log out"
 
     footer:
       fels: "The Framgia E-learning System"
@@ -63,3 +67,14 @@ en:
 
     show:
       user_not_exist: "User does not exist!"
+
+  sessions:
+    new:
+      title: "Log in"
+      log_in: "Log in"
+      remember_me: "Remember me on this computer"
+      new_user: "New user?"
+      sign_up: "Sign up now!"
+
+    create:
+      invalid_email_or_password: "Invalid email/password combination."

@@ -1,0 +1,8 @@
+<li>
+  <%= link_to gravatar_for(lesson.user, size: 50), lesson.user %>
+  <span class="user"><%= link_to lesson.user.name, lesson.user %></span>
+  <%= t ".learned" %> <%= lesson.progress %> <%= t ".words_in" %> "<%= lesson.category.name %>" 
+  <span class="timestamp">
+    - <%= l lesson.updated_at, format: :sample %>.
+  </span>
+</li>

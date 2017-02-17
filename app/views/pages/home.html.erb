@@ -1,6 +1,26 @@
 <% provide :title, t(".title") %>
-<div class="center jumbotron">
-  <%= link_to image_tag "Framgia-Logo.png" %>
-  <h1><%= t ".center_logo" %></h1>
-  <%= link_to t(".sign_up"), signup_path, class: "btn btn-lg btn-primary" %>
-</div>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <div class="main_content">
+        <%= link_to t(".words"), "#", class: "btn btn-huge btn-lg btn-info" %>
+        <%= link_to t(".lesson"), "#", class: "btn btn-huge btn-lg btn-info" %>
+        <h3><%=t ".activities" %></h3>
+        <div class="activities">
+          <%= render "shared/activities" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <%= link_to image_tag "Framgia-Logo.png" %>
+    <h1><%= t ".center_logo" %></h1>
+    <%= link_to t(".sign_up"), signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>

@@ -179,3 +179,50 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* Main content */
+
+.main_content {
+  border-left: 1px solid #000;
+  height: 100%;
+  padding-top: 50px;
+  .btn.btn-huge {
+    margin-left: 50px;
+    padding: 30px 100px;
+  }
+  h3 {
+    margin-top: 30px;
+    margin-left: 50px;
+    border-bottom: 2px solid red;
+    color: green;
+  }
+}
+
+/* User's activities */
+
+.activities {
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .timestamp {
+    color: $gray-light;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}

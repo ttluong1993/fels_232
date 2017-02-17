@@ -3,9 +3,18 @@
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-        <%= gravatar_for @user %>
+        <%= gravatar_for @user, size: 150 %>
         <%= @user.name %>
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <div class="main_content">
+      <h3><%=t ".activities" %> (<%= pluralize @user.lessons.count, t(".lesson")
+        %>)</h3>
+      <div class="activities">
+        <%= render "shared/activities" %>
+      </div>
+    </div>
+  </div>
 </div>

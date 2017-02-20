@@ -3,3 +3,6 @@ users:
 
 lessons:
   per_page: 15
+
+words:
+  per_page: 30

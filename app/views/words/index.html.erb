@@ -1,0 +1,14 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".title" %></h1>
+
+<form class="filter_form">
+  <%= form_tag(action: :index, remote: true) do %>
+    <%= select_tag "filter_category", options_for_select(
+      Category.all.collect{|c| [c.name, c.id]}), 
+      include_blank: true,
+      onchange: "this.form.submit()" %>
+  <% end %>
+</form>
+<div id="words_list">
+  <%= render "shared/words_list" %>
+</div>

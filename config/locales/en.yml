@@ -128,3 +128,7 @@ en:
 
     destroy:
       relationship_not_exist: "Relationship does not exist!"
+
+  words:
+    index:
+      title: "Words list"

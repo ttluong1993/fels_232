@@ -271,6 +271,20 @@ input {
   .gravatar {
     float: left;
     margin-right: 50px;
-    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
+
+/* Words */
+
+.words {
+  list-style: none;
+  li {
+    padding: 10px 10px;
+    margin-bottom: 10px;
+  }
+  span {
+    font-size: large;
+    border-bottom: 1px solid #e8e8e8;
   }
 }

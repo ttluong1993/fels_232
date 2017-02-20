@@ -29,6 +29,8 @@ class UsersController < ApplicationController
   def show
     @lessons = @user.lessons.paginate page: params[:page], 
       per_page: Settings.lessons.per_page
+    @relationship = current_user.active_relationships
+      .find_by followed_id: @user.id
   end
 
   def edit

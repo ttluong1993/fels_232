@@ -30,9 +30,17 @@ Word.create! japanese: "わるい", vietnamese: "xấu",
     category: Category.first, sample_answers: sample_answers
 end
 
-user = User.first
+users = User.all
 category = Category.first
-lesson = Lesson.create user: user, category: category, word_number: 10
-Word.take(10).each do |word|
-  Result.create lesson: lesson, word: word, answer: word.vietnamese
+users.each do |user|
+  lesson = Lesson.create user: user, category: category, word_number: 10
+  Word.take(10).each do |word|
+    Result.create lesson: lesson, word: word, answer: word.vietnamese
+  end
 end
+
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each {|followed| user.follow followed}
+followers.each {|follower| follower.follow user}

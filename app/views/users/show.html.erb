@@ -7,9 +7,21 @@
         <%= @user.name %>
       </h1>
     </section>
+    <section class="stats">
+      <%= render "shared/stats" %>
+    </section>
   </aside>
   <div class="col-md-8">
     <div class="main_content">
+      <div id="follow_form">
+        <% if logged_in? && !@user.current_user?(current_user) %>
+          <% if current_user.following? @user %>
+            <%= render "unfollow" %>
+          <% else %>
+            <%= render "follow" %>
+          <% end %>
+        <% end %>
+      </div>
       <h3><%=t ".activities" %> (<%= pluralize @user.lessons.count, t(".lesson")
         %>)</h3>
       <div class="activities">

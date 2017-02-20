@@ -66,6 +66,10 @@ en:
     user_info:
       view_profile: "View my profile"
 
+    stats:
+      following: "following"
+      followers: "followers"
+
   users:
     index:
       title: "All users"
@@ -90,6 +94,12 @@ en:
     update:
       profile_updated: "Profile updated"
 
+    follow:
+      follow: "Follow"
+
+    unfollow:
+      unfollow: "Unfollow"
+
   sessions:
     new:
       title: "Log in"
@@ -105,3 +115,16 @@ en:
     lesson:
       learned: "learned"
       words_in: "words in"
+
+  relationships:
+    index:
+      followers: "Followers"
+      following: "Following"
+      user_not_exist: "User does not exist!"
+      unexpected_relationship: "Unexpected value for relationship!"
+
+    create:
+      user_not_exist: "User does not exist!"
+
+    destroy:
+      relationship_not_exist: "Relationship does not exist!"

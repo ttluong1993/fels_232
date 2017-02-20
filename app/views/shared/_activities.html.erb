@@ -1,0 +1,6 @@
+<% if @lessons.any? %>
+  <ol class="lessons">
+    <%= render @lessons %>
+  </ol>
+  <%= will_paginate @lessons %>
+<% end %>

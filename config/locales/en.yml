@@ -7,11 +7,17 @@ en:
         password: "Password"
         password_confirmation: "Password confirmation"
 
+  time:
+    formats:
+      sample: "%Y/%m/%d"
+
   pages:
     home:
       title: "Home"
       center_logo: "E-learning System"
       sign_up: "Sign up now"
+      words: "Words"
+      lesson: "Lesson"
 
     help:
       title: "Help"
@@ -57,7 +63,13 @@ en:
       form_contains: "The form contains"
       error: "error"
 
+    user_info:
+      view_profile: "View my profile"
+
   users:
+    index:
+      title: "All users"
+
     new:
       title: "Sign up"
       create_account: "Create my account"
@@ -67,6 +79,16 @@ en:
 
     show:
       user_not_exist: "User does not exist!"
+      lesson: "lesson"
+
+    edit:
+      title: "Edit user"
+      update_profile: "Update your profile"
+      save_changes: "Save changes"
+      change_avatar: "Change avatar"
+    
+    update:
+      profile_updated: "Profile updated"
 
   sessions:
     new:
@@ -78,3 +100,8 @@ en:
 
     create:
       invalid_email_or_password: "Invalid email/password combination."
+
+  lessons:
+    lesson:
+      learned: "learned"
+      words_in: "words in"

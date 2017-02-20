@@ -45,6 +45,14 @@ class User < ApplicationRecord
     return false if digest.nil?
     BCrypt::Password.new(digest).is_password? token
   end
+  
+  def current_user? current_user
+    self == current_user
+  end
+
+  def feeds
+    self.lessons
+  end
 
   private
   def downcase_email

@@ -11,8 +11,8 @@
     </aside>
     <div class="col-md-8">
       <div class="main_content">
-        <%= link_to t(".words"), "#", class: "btn btn-huge btn-lg btn-info" %>
-        <%= link_to t(".lesson"), "#", class: "btn btn-huge btn-lg btn-info" %>
+        <%= link_to t(".words"), user_words_path(@user), class: "btn btn-huge btn-lg btn-info" %>
+        <%= link_to t(".lesson"), categories_path, class: "btn btn-huge btn-lg btn-info" %>
         <h3><%=t ".activities" %></h3>
         <div class="activities">
           <%= render "shared/activities" %>

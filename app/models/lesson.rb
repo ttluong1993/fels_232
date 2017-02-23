@@ -1,6 +1,6 @@
 class Lesson < ApplicationRecord
   belongs_to :user
-  belongs_to :category
+  belongs_to :category, counter_cache: true
   has_many :results, dependent: :destroy
   
   scope :updated_at_desc, ->{order updated_at: :desc}

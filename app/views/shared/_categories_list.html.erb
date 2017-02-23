@@ -1,0 +1,9 @@
+<div class="digg_pagination">
+  <div class="page_pagination_info">
+    <%= page_entries_info @categories %>
+  </div>
+  <%= paginate @categories %>
+</div>
+<% if @categories.any? %>
+  <%= render @categories %>
+<% end %>

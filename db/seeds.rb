@@ -22,20 +22,28 @@ Word.create! japanese: "きれい", vietnamese: "đẹp",
   category: Category.first, sample_answers: "xấu; đẹp; sai; đúng"
 Word.create! japanese: "わるい", vietnamese: "xấu",
   category: Category.first, sample_answers: "xấu; tốt; sai; đúng"
-50.times do |n|
+500.times do |n|
   japanese = "basic-jp-#{n}"
   vietnamese = "basic-vn-#{n}"
-  sample_answers = "ans-1; ans-2; ans-3; ans-4; ans-5"
+  sample_answers = "ans-1; ans-2; ans-3; ans-4; basic-vn-#{n}"
   Word.create! japanese: japanese, vietnamese: vietnamese,
     category: Category.first, sample_answers: sample_answers
+end
+
+100.times do |n|
+  japanese = "advance-jp-#{n}"
+  vietnamese = "advance-vn-#{n}"
+  sample_answers = "ans-1; ans-2; ans-3; ans-4; advance-vn-#{n}"
+  Word.create! japanese: japanese, vietnamese: vietnamese,
+    category: Category.second, sample_answers: sample_answers
 end
 
 users = User.all
 category = Category.first
 users.each do |user|
   lesson = Lesson.create user: user, category: category, word_number: 10
-  Word.take(10).each do |word|
-    Result.create lesson: lesson, word: word, answer: word.vietnamese
+  Word.unlearned_by(user).take(20).each do |word|
+    Result.create lesson: lesson, word: word, answer: word.vietnamese, correct: true
   end
 end
 

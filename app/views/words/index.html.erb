@@ -1,0 +1,17 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".title" %></h1>
+
+<div class="filters_form">
+  <%= form_tag "words", action: :index, method: :get, remote: true do %>
+    <%= label_tag t ".category" %>
+    <%= select_tag :category_id, 
+      options_for_select(@categories), {include_blank: "All"} %>
+    <%= label_tag t ".status" %>
+    <%= radio_button_tag :status, "learned", false, {id: "status"} %> learned 
+    <%= radio_button_tag :status, "unlearned", false, {id: "status"} %> unlearned 
+    <%= radio_button_tag :status, "all", true, {id: "status"} %> all 
+  <% end %>
+</div>
+<div id="words_list">
+  <%= render "shared/words_list" %>
+</div>

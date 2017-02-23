@@ -69,6 +69,12 @@ en:
     stats:
       following: "following"
       followers: "followers"
+      learned: "Learned"
+      word: "word"
+
+    word_list:
+      japanese: "Japanese"
+      vietnamese: "vietnamese"
 
   users:
     index:
@@ -128,3 +134,23 @@ en:
 
     destroy:
       relationship_not_exist: "Relationship does not exist!"
+
+  words:
+    index:
+      title: "Words list"
+      category: "Category"
+      status: "Status"
+
+  categories:
+    index:
+      title: "Categories"
+      search: "Search"
+      placeholder: "Enter category's name here"
+      order_by: "Order by"
+      a_z: "Name A-Z"
+      z_a: "Name Z-A"
+      recently: "Recently"
+      most_learned: "Most learned"
+
+    category:
+      start_lesson: "Start lesson"

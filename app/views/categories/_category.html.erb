@@ -1,0 +1,12 @@
+<div class="category">
+  <div class="col-md-5", id="description">
+    <h3><%= category.name %></h3>
+    <p><%= category.description %></p>
+    <span class="learned_status">
+    </span>
+    <%= link_to t(".start_lesson"), "#", class: "btn btn-primary" %>
+  </div>
+  <div class="col-md-5", id="cover_image">
+    <%= image_tag image_url category.cover %>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="digg_pagination">
+  <div class="page_pagination_info">
+    <%= page_entries_info @words %>
+  </div>
+  <%= paginate @words %>
+</div>
+<div class="row">
+  <% @words.in_groups(2, false).each do |words| %>
+    <% if words.any? %>
+      <div class="col-md-6">
+        <ul class="words">
+          <li>
+            <span class="col-md-4"><%= t ".japanese" %></span>
+            <span class="col-md-4"><%= t ".vietnamese" %></span>
+          </li>
+          <%= render words %>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<div class="digg_pagination">
+  <%= paginate @words %>
+</div>
